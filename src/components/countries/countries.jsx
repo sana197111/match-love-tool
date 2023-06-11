@@ -25,7 +25,7 @@ const Profile = ({ match }) => {
         <>
             <div className={styles.wrapper} key={nation.id}>
                 <div className={styles.container}>
-                    <div className={styles.header}>
+                    {/* <div className={styles.header}>
                         <>
                             <Link to="/">
                                 <FontAwesomeIcon
@@ -34,7 +34,7 @@ const Profile = ({ match }) => {
                                 />
                             </Link>
                         </>
-                    </div>
+                    </div> */}
                     <img
                         src={nation.img}
                         alt="img"
@@ -113,8 +113,8 @@ const Profile = ({ match }) => {
                             <a
                                 href="https://matchlove.netlify.app/"
                                 className={styles.service__button}
-                                target="_blank" // 새 탭에서 열기를 원하실 경우 추가해주세요.
-                                rel="noopener noreferrer" // 새 탭에서 열 때는 보안상 이 속성을 꼭 추가하세요.
+                                target="_blank" 
+                                rel="noopener noreferrer"
                             >서비스 소개
                                 <FontAwesomeIcon icon={faSignOutAlt} className={styles.icon} />
                             </a>
