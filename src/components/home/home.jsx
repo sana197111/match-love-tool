@@ -11,7 +11,7 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 const Home = () => {
     const url = window.location.href; // url 복사
     const copyAlert = () => {
-        alert('링크 생성!');
+        alert('링크가 복사되었습니다!');
     };
     return (
         <>
@@ -37,18 +37,14 @@ const Home = () => {
                                 className={styles.icon}
                             />
                         </Link>
-                        <CopyToClipboard text={url}>
-                            <button
-                                className={styles.start__button}
-                                onClick={copyAlert}
-                            >
-                                링크복사
-                                <FontAwesomeIcon
-                                    icon={faCopy}
-                                    className={styles.icon}
-                                />
-                            </button>
-                        </CopyToClipboard>
+                        <a
+                            href="https://matchlove.netlify.app/"
+                            className={styles.service__button}
+                            target="_blank" // 새 탭에서 열기를 원하실 경우 추가해주세요.
+                            rel="noopener noreferrer" // 새 탭에서 열 때는 보안상 이 속성을 꼭 추가하세요.
+                        >서비스 소개
+                            <FontAwesomeIcon icon={faArrowAltCircleRight} className={styles.icon} />
+                        </a>
                     </div>
                 </div>
             </div>

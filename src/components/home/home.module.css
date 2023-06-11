@@ -41,6 +41,26 @@
 	border: none;
 }
 
+.service__button {
+	margin-bottom: 1rem;
+	width: 45vw;
+	height: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 6px;
+	background-color: #6ab8e6;
+	color: #fff;
+}
+
+.service__button:active {
+	color: #fff;
+	background-color: #f688a5;
+	transform: scale(0.95);
+	transition: 10ms;
+	border: none;
+}
+
 .top {
 	margin: 15vh 0 3vh;
 }
@@ -83,6 +103,9 @@
 	}
 
 	.start__button {
+		width: 20vw;
+	}
+	.service__button {
 		width: 20vw;
 	}
 }
