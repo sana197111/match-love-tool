@@ -122,7 +122,7 @@ const Profile = ({ match }) => {
                     <img
                     src='/img/event.png'
                     alt="img"
-                    className={styles.main__img}
+                    className={styles.event__img}
                     />  
                 </div>
             </div>
