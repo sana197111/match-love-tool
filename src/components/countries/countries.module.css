@@ -31,6 +31,13 @@ strong {
 	border-radius: 20px;
 }
 
+.event__img {
+	margin: 1rem 0 1rem 0;
+	width: 100%;
+	height: 30%;
+	border-radius: 20px;
+}
+
 .result__city {
 	margin: 1rem;
 	font-size: 1.3rem;

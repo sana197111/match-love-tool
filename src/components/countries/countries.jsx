@@ -119,6 +119,11 @@ const Profile = ({ match }) => {
                                 <FontAwesomeIcon icon={faSignOutAlt} className={styles.icon} />
                             </a>
                     </div>
+                    <img
+                    src='/img/event.png'
+                    alt="img"
+                    className={styles.main__img}
+                    />  
                 </div>
             </div>
         </>

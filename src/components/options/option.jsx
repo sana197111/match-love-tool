@@ -115,7 +115,7 @@ const Options = () => {
                     <div className={styles.loading__container}>
                         <img
                             className={styles.ticket}
-                            src="img/flying.png"
+                            src="/img/flying.png"
                             alt="e-ticket"
                         />
                         <div className={styles.loading}></div>
