@@ -31,7 +31,7 @@ const Home = () => {
                     </div>
                     <div className={styles.bottom}>
                         <Link to="/matchMBTI" className={styles.start__button}>
-                            테스트 하기
+                            테스트하고 팝업스토어 초대받기
                             <FontAwesomeIcon
                                 icon={faArrowAltCircleRight}
                                 className={styles.icon}
