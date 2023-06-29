@@ -118,6 +118,14 @@ const Profile = ({ match }) => {
                             >서비스 소개
                                 <FontAwesomeIcon icon={faSignOutAlt} className={styles.icon} />
                             </a>
+                            <a
+                                href="https://forms.gle/zEC4ABCvQKe6QMaJ8"
+                                className={styles.service__button}
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                            >팝업스토어 신청하기
+                                <FontAwesomeIcon icon={faSignOutAlt} className={styles.icon} />
+                            </a>
                     </div>
                     <img
                     src='/img/event.png'
