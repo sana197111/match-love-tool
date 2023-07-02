@@ -23,7 +23,7 @@
 
 .start__button {
 	margin-bottom: 1rem;
-	width: 45vw;
+	width: 60vw;
 	height: 3rem;
 	display: flex;
 	justify-content: center;
@@ -43,7 +43,7 @@
 
 .service__button {
 	margin-bottom: 1rem;
-	width: 45vw;
+	width: 60vw;
 	height: 3rem;
 	display: flex;
 	justify-content: center;

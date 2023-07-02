@@ -31,7 +31,7 @@ const Home = () => {
                     </div>
                     <div className={styles.bottom}>
                         <Link to="/matchMBTI" className={styles.start__button}>
-                            테스트하고 팝업스토어 초대받기
+                            성향 테스트 하기
                             <FontAwesomeIcon
                                 icon={faArrowAltCircleRight}
                                 className={styles.icon}
@@ -43,6 +43,14 @@ const Home = () => {
                             target="_blank" 
                             rel="noopener noreferrer"
                         >서비스 소개
+                            <FontAwesomeIcon icon={faArrowAltCircleRight} className={styles.icon} />
+                        </a>
+                        <a
+                            href="https://forms.gle/zEC4ABCvQKe6QMaJ8"
+                            className={styles.service__button}
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                        >팝업스토어 초대장 받기
                             <FontAwesomeIcon icon={faArrowAltCircleRight} className={styles.icon} />
                         </a>
                     </div>

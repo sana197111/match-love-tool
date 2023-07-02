@@ -55,7 +55,8 @@ button {
 .mbti__btn__box {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    align-items: center; 
+    width: 90%;
     height: 25vh;
     margin:auto;
 }
@@ -63,6 +64,9 @@ button {
 .mbti__button {
     display: flex;
     justify-content: center;
+    align-items: center; 
+    width: 100%;
+    /* margin: 1rem auto; */
     height: 80%;
     margin: 1rem;
     padding: 1.2rem;
@@ -128,7 +132,7 @@ button {
     }
 
     .mbti__btn__box {
-        width: 50%;
+        width: 100%;
     }
 
     .mbti__counter {
@@ -137,6 +141,7 @@ button {
 
     .mbti__button {
         display: flex;
+        width: 80%;
         flex-direction: column;
         align-items: center;
     }
