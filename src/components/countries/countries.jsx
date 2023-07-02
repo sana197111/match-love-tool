@@ -118,6 +118,13 @@ const Profile = ({ match }) => {
                             >서비스 소개
                                 <FontAwesomeIcon icon={faSignOutAlt} className={styles.icon} />
                             </a>
+                            {/* <Link to="/popupform" className={styles.button}>
+                            팝업스토어 신청하기
+                            <FontAwesomeIcon
+                                icon={faSignOutAlt}
+                                className={styles.icon}
+                            />
+                            </Link> */}
                             <a
                                 href="https://forms.gle/zEC4ABCvQKe6QMaJ8"
                                 className={styles.service__button}

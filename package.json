@@ -4,6 +4,7 @@
 	"private": true,
 	"homepage": "https://felizmbti.netlify.app",
 	"dependencies": {
+		"@babel/core": "^7.22.5",
 		"@fortawesome/fontawesome-free": "^5.15.2",
 		"@fortawesome/fontawesome-svg-core": "^1.2.34",
 		"@fortawesome/free-brands-svg-icons": "^5.15.2",
@@ -13,14 +14,18 @@
 		"@testing-library/jest-dom": "^5.11.4",
 		"@testing-library/react": "^11.1.0",
 		"@testing-library/user-event": "^12.1.10",
+		"dotenv": "^16.3.1",
+		"kakaojs": "^1.2.0",
 		"postcss": "^8.2.6",
 		"react": "^17.0.1",
 		"react-copy-to-clipboard": "^5.0.3",
 		"react-dom": "^17.0.1",
+		"react-kakao-login": "^2.1.1",
 		"react-router-dom": "^5.2.0",
 		"react-scripts": "4.0.2",
 		"styled-components": "^5.2.1",
 		"styled-reset": "^4.3.4",
+		"typescript": "^5.1.6",
 		"web-vitals": "^1.0.1"
 	},
 	"scripts": {
