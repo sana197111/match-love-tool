@@ -1,7 +1,5 @@
-// PopupForm.jsx
 import React, { useState } from 'react';
 import styles from './popupForm.module.css';
-import KakaoLogin from 'react-kakao-login';
 
 const PopupForm = () => {
   const [name, setName] = useState('');
@@ -26,33 +24,27 @@ const PopupForm = () => {
       return;
     }
 
-    // 여기서 카카오톡 메세지를 보내는 함수를 호출하세요.
-    /* 나머지 부분 'handleSubmit' 함수 내에 호출 할 카카오톡 메세지 전송 코드 */
-    window.Kakao.Link.createDefaultButton({
-      container: '#kakao-link-btn',
+    window.Kakao.Link.sendDefault({
       objectType: 'feed',
       content: {
         title: '팝업스토어 초대',
         description: '팝업스토어에 초대합니다',
-        imageUrl: '초대장_사진_URL',
+        imageUrl: 'https://drive.google.com/uc?export=view&id=11jVOKJ8urhrONufF6Nc2WkZPSh_Qm2cE',
         link: {
-          mobileWebUrl: '자세히보기_링크_URL',
-          webUrl: '자세히보기_링크_URL',
+          mobileWebUrl: 'https://drive.google.com/uc?export=view&id=11jVOKJ8urhrONufF6Nc2WkZPSh_Qm2cE',
+          webUrl: 'https://drive.google.com/uc?export=view&id=11jVOKJ8urhrONufF6Nc2WkZPSh_Qm2cE',
         },
-        },
-        buttons: [
-          {
-            title: '자세히 보기',
-            link: {
-              mobileWebUrl: '자세히보기_링크_URL',
-              webUrl: '자세히보기_링크_URL',
-            },
+      },
+      buttons: [
+        {
+          title: '자세히 보기',
+          link: {
+            mobileWebUrl: 'www.naver.com',
+            webUrl: 'www.naver.com',
           },
-        ],
+        },
+      ],
     });
-
-// 카카오톡 메세지를 보내는 함수를 호출하세요.
-
   };
 
   const validateEmail = (email) => {
@@ -72,14 +64,13 @@ const PopupForm = () => {
         <input type="text" placeholder="이름" value={name} onChange={(e) => setName(e.target.value)} />
         <input type="text" placeholder="핸드폰 번호" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
         <input type="text" placeholder="이메일" value={email} onChange={(e) => setEmail(e.target.value)} />
-        <button type="submit">초대장 받기</button>
+        <button type="submit">카카오톡으로 초대장 받기</button>
       </form>
     </div>
   );
 };
 
 export default PopupForm;
-
 
 
 // popupForm.jsx
