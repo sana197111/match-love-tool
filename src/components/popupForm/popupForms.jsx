@@ -1,13 +1,20 @@
 import React, { useState } from 'react';
 import styles from './popupForm.module.css';
+import { Link } from 'react-router-dom';
 
 const PopupForm = () => {
   const [name, setName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [email, setEmail] = useState('');
+  const [isChecked, setIsChecked] = useState(false);
 
+  const handleCheck = () => {
+    setIsChecked(!isChecked);
+  };
+
+  // handleSubmit 함수 선언이 누락되어 있었습니다.
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // 기본 이벤트를 방지합니다.
 
     if (!name || !phoneNumber || !email) {
       alert('모든 정보를 입력해주세요.');
@@ -23,28 +30,6 @@ const PopupForm = () => {
       alert('올바른 핸드폰 번호를 입력해주세요.');
       return;
     }
-
-    window.Kakao.Link.sendDefault({
-      objectType: 'feed',
-      content: {
-        title: '팝업스토어 초대',
-        description: '팝업스토어에 초대합니다',
-        imageUrl: 'https://drive.google.com/uc?export=view&id=11jVOKJ8urhrONufF6Nc2WkZPSh_Qm2cE',
-        link: {
-          mobileWebUrl: 'https://drive.google.com/uc?export=view&id=11jVOKJ8urhrONufF6Nc2WkZPSh_Qm2cE',
-          webUrl: 'https://drive.google.com/uc?export=view&id=11jVOKJ8urhrONufF6Nc2WkZPSh_Qm2cE',
-        },
-      },
-      buttons: [
-        {
-          title: '자세히 보기',
-          link: {
-            mobileWebUrl: 'www.naver.com',
-            webUrl: 'www.naver.com',
-          },
-        },
-      ],
-    });
   };
 
   const validateEmail = (email) => {
@@ -58,127 +43,57 @@ const PopupForm = () => {
   };
 
   return (
-    <div className={styles.container}>
-      <h1>팝업스토어 신청하기</h1>
-      <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="이름" value={name} onChange={(e) => setName(e.target.value)} />
-        <input type="text" placeholder="핸드폰 번호" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
-        <input type="text" placeholder="이메일" value={email} onChange={(e) => setEmail(e.target.value)} />
-        <button type="submit">카카오톡으로 초대장 받기</button>
-      </form>
+    <div className={styles.top}>
+      <div className={styles.container}>
+        <h1 className={styles.title}>팝업스토어 신청하기</h1>
+        <form onSubmit={handleSubmit}>
+          <div className={styles.inputbox}>
+            <p className={styles.label}>아이디</p>
+            <input className={styles.button} type="text" placeholder="실명을 입력해주세요." value={name} onChange={(e) => setName(e.target.value)} />
+          </div>
+          <div className={styles.inputbox}>
+            <p className={styles.label}>연락처</p>
+            <input className={styles.button} type="text" placeholder="숫자로 입력해주세요." value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
+          </div>
+          <div className={styles.inputbox}>
+            <p className={styles.label}>이메일</p>
+            <input className={styles.button} type="text" placeholder="이메일 주소를 입력해 주세요." value={email} onChange={(e) => setEmail(e.target.value)} />
+          </div>
+          <div className={styles.inputbox}>
+            <p className={styles.label}>추천인</p>
+            <input className={styles.button} type="text" placeholder="실명을 입력해주세요." value={name} onChange={(e) => setName(e.target.value)} />
+          </div>
+          <div className="checkbox-container">
+            <label htmlFor="marketing-consent" className={styles.checkbox}>
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 28 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="cursor"
+              >
+                <path
+                  d="M14 1.75C11.5772 1.75 9.20877 2.46845 7.19427 3.8145C5.17977 5.16054 3.60965 7.07373 2.68248 9.31213C1.75531 11.5505 1.51272 14.0136 1.98539 16.3899C2.45805 18.7661 3.62475 20.9489 5.33795 22.6621C7.05114 24.3753 9.23388 25.542 11.6101 26.0146C13.9864 26.4873 16.4495 26.2447 18.6879 25.3175C20.9263 24.3904 22.8395 22.8202 24.1855 20.8057C25.5316 18.7912 26.25 16.4228 26.25 14C26.25 10.7511 24.9594 7.63526 22.6621 5.33794C20.3647 3.04062 17.2489 1.75 14 1.75V1.75ZM12.25 18.8919L7.87501 14.5169L9.26678 13.125L12.25 16.1081L18.7338 9.625L20.13 11.0127L12.25 18.8919Z"
+                  fill={isChecked ? '#5B4CF' : 'none'}
+                  stroke={isChecked ? 'none' : '#D3D3D3'}
+                />
+              </svg>
+            </label>
+            <label htmlFor="marketing-consent">
+              <span className="text">
+                마케팅 목적의 <a href="/personal-info">개인정보 수집 및 이용 동의</a> (필수)
+              </span>
+            </label>
+            <Link to="/" className={styles.invitation__Button}>
+                            초대장 받기
+            </Link>
+          </div>
+          
+        </form>
+      </div>
     </div>
   );
 };
 
 export default PopupForm;
-
-
-// popupForm.jsx
-// import React, { useState } from 'react';
-// import styles from './popupForm.module.css';
-// import KakaoLogin from 'react-kakao-login';
-
-
-// const PopupForm = () => {
-//   const [name, setName] = useState('');
-//   const [phone, setPhone] = useState('');
-//   const [email, setEmail] = useState('');
-
-//   // Kakao 로그인 성공 핸들러
-//   const onKakaoLoginSuccess = (response) => {
-//     console.log(response);
-//     submitInfoWithKakao(); // name, phone, email
-//   };
-
-
-//   // Kakao 로그인 실패 핸들러
-//   const onKakaoLoginFailure = (error) => {
-//     console.error(error);
-//   };
-
-//   // 정보 및 이미지 전송 함수
-//   const submitInfoWithKakao = () => { //name, phone, email
-//     // TODO: 현재 상태 정보를 데이터베이스에 저장하세요 (필요 시).
-
-//     window.Kakao.Link.sendDefault({
-//       objectType: 'feed',
-//       content: {
-//         title: '매치러브 팝업스토어에 초대합니다.',
-//         description: '함께 해요!',
-//         imageUrl: 'https://drive.google.com/uc?export=view&id=11jVOKJ8urhrONufF6Nc2WkZPSh_Qm2cE',
-//         link: {
-//           webUrl: 'naver.com',
-//           mobileWebUrl: 'naver.com',
-//         },
-//       },
-//       button: [
-//         {
-//           title: '자세히 살펴보기',
-//           link: {
-//             webUrl: 'https://www.naver.com',
-//             mobileWebUrl: 'https://www.naver.com',
-//           },
-//         },
-//       ],
-//     })
-//   }
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-
-//     // 양식 검증 및 신청 처리 로직
-//     console.log('신청 내용', {
-//       name,
-//       phone,
-//       email,
-//     });
-
-//     // 입력란 초기화
-//     setName('');
-//     setPhone('');
-//     setEmail('');
-//   };
-
-//   return (
-//     <div className={styles.container}>
-//       <h2 className={styles.title}>팝업스토어 신청하기</h2>
-//       <form className={styles.form} onSubmit={handleSubmit}>
-//         <label>
-//           성함
-//           <input
-//             type="text"
-//             value={name}
-//             onChange={(e) => setName(e.target.value)}
-//             required
-//           />
-//         </label>
-//         <label>
-//           핸드폰 번호
-//           <input
-//             type="tel"
-//             pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
-//             value={phone}
-//             onChange={(e) => setPhone(e.target.value)}
-//             required
-//           />
-//         </label>
-//         <label>
-//           이메일
-//           <input
-//             type="email"
-//             value={email}
-//             onChange={(e) => setEmail(e.target.value)}
-//             required
-//           />
-//         </label>
-//         <KakaoLogin
-//           onSuccess={onKakaoLoginSuccess}
-//           onFailure={onKakaoLoginFailure}
-//           className={styles.kakaoButtonText}
-//         >카카오톡으로 초대장 받기</KakaoLogin>  
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default PopupForm;
