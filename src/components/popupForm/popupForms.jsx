@@ -51,20 +51,20 @@ const PopupForm = () => {
       </div>
       <form onSubmit={handleSubmit}>
         <div className={styles.inputbox}>
-          <p className={styles.label}>아이디</p>
-          <input className={styles.button} type="text" placeholder="실명을 입력해주세요." value={name} onChange={(e) => setName(e.target.value)} />
+          <p className={styles.label}>이름</p>
+          <input className={styles.inputtext} type="text" placeholder="실명을 입력해주세요." value={name} onChange={(e) => setName(e.target.value)} />
         </div>
         <div className={styles.inputbox}>
           <p className={styles.label}>연락처</p>
-          <input className={styles.button} type="text" placeholder="숫자로 입력해주세요." value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
+          <input className={styles.inputtext} type="text" placeholder="숫자로 입력해주세요." value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
         </div>
         <div className={styles.inputbox}>
           <p className={styles.label}>이메일</p>
-          <input className={styles.button} type="text" placeholder="이메일 주소를 입력해 주세요." value={email} onChange={(e) => setEmail(e.target.value)} />
+          <input className={styles.inputtext} type="text" placeholder="이메일 주소를 입력해 주세요." value={email} onChange={(e) => setEmail(e.target.value)} />
         </div>
         <div className={styles.inputbox}>
           <p className={styles.label}>추천인</p>
-          <input className={styles.button} type="text" placeholder="실명을 입력해주세요." value={name} onChange={(e) => setRecommend(e.target.value)} />
+          <input className={styles.inputtext} type="text" placeholder="실명을 입력해주세요." value={name} onChange={(e) => setRecommend(e.target.value)} />
         </div>
         <div className="checkbox-container">
           <label htmlFor="marketing-consent" className={styles.checkbox} onClick={handleCheck}>
@@ -97,7 +97,6 @@ const PopupForm = () => {
                           초대장 받기
           </Link>
         </div>
-        
       </form>
     </div>
   );

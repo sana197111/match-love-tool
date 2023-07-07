@@ -1,6 +1,7 @@
 /* popupForm.module.css */
 
 .logo {
+  margin-top: 30px;
   width: 60px;
 }
 
@@ -25,22 +26,24 @@
   font-weight: 600;
   color: #000;
   text-align: left;
-  margin-top: 21.44px;
+  margin-top: 15px;
   margin-bottom: 32px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.button {
+.inputtext {
   height: 24px;
-  margin-left: 0;
+  display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 6px;
 }
 
 .inputbox {
+  margin-top: 1.5rem;
   margin-bottom: 24px;
-  width: 100%; /* 추가 */
-  max-width: 348px; /* 추가 */
 }
 
 .inputbox .label {
