@@ -1,6 +1,7 @@
 /* popupForm.module.css */
-.top {
-  margin: 15vh 0 3vh;
+
+.logo {
+  width: 60px;
 }
 
 .container {
@@ -15,17 +16,20 @@
 
 @media (min-width: 378px) {
   .container {
-    padding: 20px 20px;
+    padding: 18px 18px;
   }
 }
 
 .title {
-  font-size: 32px;
+  font-size: 24px;
+  font-weight: 600;
   color: #000;
   text-align: left;
   margin-top: 21.44px;
   margin-bottom: 32px;
-  /* width: 100%; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .button {
@@ -72,7 +76,7 @@
   margin-left: 8px;
 }
 
-.invitation__Button {
+.invitation__Button{
   margin-top: 1.5rem;
 	margin-bottom: 1rem;
 	/* width: 60vw; */
