@@ -4,6 +4,7 @@ import Countries from '../src/components/countries/countries';
 import GlobalStyle from './common/css/globalStyle';
 import Options from './components/options/option';
 import PopupForms from '../src/components/popupForm/popupForms';
+import Invitation from '../src/components/invitation/invitation';
 const App = () => {
     return (
         <BrowserRouter>
@@ -13,6 +14,7 @@ const App = () => {
                 <Route exact path="/matchMBTI" component={Options} />
                 <Route path="/result/:countryName" component={Countries} />
                 <Route path="/popupform" component={PopupForms} />
+                <Route path="/invitation" component={Invitation} />
             </Switch>
         </BrowserRouter>
     );

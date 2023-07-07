@@ -1,3 +1,8 @@
+
+
+
+
+
 /* popupForm.module.css */
 
 .logo {
@@ -26,7 +31,7 @@
   font-weight: 600;
   color: #000;
   text-align: left;
-  margin-top: 15px;
+  margin-top: 10px;
   margin-bottom: 32px;
 	display: flex;
 	justify-content: center;
@@ -42,24 +47,24 @@
 }
 
 .inputbox {
-  margin-top: 1.5rem;
+  margin-top: 0.75rem;
   margin-bottom: 24px;
 }
 
-.inputbox .label {
+.inputtext .label {
   color: #000;
   font-size: 12px;
   text-align: left;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
-.inputbox input {
+.inputtext input {
   display: block;
   width: 100%;
   max-width: 348px;
   font-size: 16px;
   padding: 11px 16px 13px;
-  border: 1.5px solid lightgray;
+  border: 1px solid lightgray;
   border-radius: 8px;
   transition: border-color 0.3s; 
 }
@@ -74,7 +79,7 @@
   margin-bottom: 32px;
 }
 
-.text {
+.checktext {
   font-size: 16px;
   margin-left: 8px;
 }
@@ -109,4 +114,17 @@
   height: 28px;
   margin-right: 8px;
   cursor: pointer;
+}
+
+/* popupForm.module.css */
+
+.warningInput {
+  border: 1px solid #f44336;
+}
+
+.warning {
+  color: #f44336;
+  font-size: 12px;
+  margin-top: 4px;
+  display: none;
 }

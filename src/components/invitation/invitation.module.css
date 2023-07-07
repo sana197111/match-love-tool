@@ -1,0 +1,38 @@
+.invitationWrapper {
+    margin: 0 auto;
+    max-width: 640px;
+    padding: 1.5rem;
+  }
+  
+  .greeting, .companyTitle {
+    font-size: 24px;
+    margin-bottom: 1rem;
+  }
+  
+  .message, .dates, .instruction, .location, .hoursTitle {
+    font-size: 18px;
+    margin-bottom: 1rem;
+  }
+  
+  .invitationImage {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  
+  .link {
+    font-size: 18px;
+  }
+  
+  .link a {
+    color: #f688a5;
+  }
+  
+  .hours {
+    font-size: 18px;
+  }
+  
+  .companyDescription {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
