@@ -1,0 +1,32 @@
+/* .background-image {
+    background-image: "img/background.png";
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1024px;
+    height: 1365.8px;
+    padding: 251px 0 343.4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
+
+
+.background {
+    max-width: 1024px;
+    /* height: 1365.8px; */
+    margin: 0 auto;
+    /* padding: 251px 0 343.4px; */
+  }
+
+.book {
+    width: 205px;
+    height: 229px;
+    margin: 221px 14px 321.4px 97px;
+  }
+
+.mike {
+    width: 442px;
+    height: 446.1px;
+    margin: 78px 48px 247.2px 17px;
+    transform: rotate(-0.02deg);
+  }

@@ -57,7 +57,7 @@ const PopupForm = () => {
         <div className={styles.section}>
           <h2 className={styles.title}>팝업스토어 신청</h2>
           <form onSubmit={handleSubmit}>
-            <div className={styles.group__title}>이름*</div>
+            <div className={styles.group__title}>이름 *</div>
             <input
               id="name-input"
               className={styles.inputtext}
@@ -71,7 +71,7 @@ const PopupForm = () => {
               이름을 입력해주세요.
             </div>
 
-            <div className={styles.group__title}>전화번호*</div>
+            <div className={styles.group__title}>전화번호 *</div>
             <input
               id="phone-input"
               className={styles.inputtext}
@@ -86,7 +86,7 @@ const PopupForm = () => {
               올바른 전화번호를 입력해주세요. ( - 제외)
             </div>
 
-            <div className={styles.group__title}>이메일 주소*</div>
+            <div className={styles.group__title}>이메일 주소 *</div>
             <input
               id="email-input"
               className={styles.inputtext}
